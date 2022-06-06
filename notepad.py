@@ -78,8 +78,9 @@ def textReplacer(text, replace):
             # textarea.tag_add('found', idx, lastidx)
             textarea.replace(idx, lastidx, replace.get())
             idx = lastidx
-        fileSaved = False
-        now_title = notepad.title()
+    fileSaved = False
+    now_title = notepad.title()
+    if not notepad.title().startswith("*"):
         notepad.title("*" + now_title)
 
     # textarea.tag_config('found', foreground="black", background="yellow")
